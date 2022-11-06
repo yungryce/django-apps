@@ -1,0 +1,9 @@
+{% extends 'blog_codemy/base.html' %}
+{% block title %} posts {% endblock %}
+{% block content %}
+
+<form method="POST" class="bg-gray-500 text-black space-y-2">
+{% csrf_token %}
+{{ form.as_p }}
+<button class="px-6 py-3 bg-brightRed text-white rounded-full hover:bg-brightRedLight"> Submit </button>
+{% endblock %}

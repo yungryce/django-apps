@@ -1,0 +1,14 @@
+{% extends 'blog_codemy/base.html' %}
+
+{% block content %}
+
+{% for reg in object_list %}
+<ul>
+    <li><a href="{% url 'details' reg.pk %}"> {{ reg.title }} </a>
+    {{ reg.title }} - {{ reg.author.first_name}} {{ reg.author.last_name}} </br>
+    - {{reg.body}}
+    </li>
+</ul>
+{% endfor %} 
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'blog_codemy/base.html' %}
+{% block title %} {{ reg.id }} {{ reg.title_tag }} {% endblock %}
+{% block content %}
+
+<h1> {{ reg.title}} </h1>
+
+<small>By: {{ reg.author.last_name }} {{ reg.author.first_name }} </small>
+</br>
+<hr>
+</br>
+{{ reg.body }}
+</br>
+</br>
+<a href="{% url 'home' %}" class="px-6 py-3 bg-brightRed text-white rounded-full hover:bg-brightRedLight">Back</a>
+
+{% endblock %}
