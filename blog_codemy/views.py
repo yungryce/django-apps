@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView, CreateView
 from .models import Reg
+from .forms import Formsk
 
 # Create your views here.
 # def index(request):
@@ -18,5 +19,6 @@ class DetailV(DetailView):
 class Formview(CreateView):
     model = Reg
     template_name = 'blog_codemy/forms.html'
-    fields = '__all__'
+    form_class = Formsk
+    # fields = '__all__'
     # fields = ('title', 'body')
