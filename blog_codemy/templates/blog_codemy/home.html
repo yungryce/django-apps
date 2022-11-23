@@ -1,12 +1,15 @@
-{% extends 'blog_codemy/base.html' %}
+{% extends 'blog_codemy/navbar.html' %}
 
 {% block content %}
 
 {% for reg in object_list %}
 <ul>
     <li><a href="{% url 'details' reg.pk %}"> {{ reg.title }} </a>
-    {{ reg.title }} - {{ reg.author.first_name}} {{ reg.author.last_name}} </br>
-    - {{reg.body}}
+    - {{ reg.author.first_name}} {{ reg.author.last_name}} </br>
+    - {{reg.body}} 
+    <br>
+    <a href="{% url 'updateform' reg.pk %}">edit</a>
+    <a href="{% url 'deletepost' reg.pk %}">delete</a>
     </li>
 </ul>
 {% endfor %} 

@@ -1,4 +1,4 @@
-{% extends 'blog_codemy/base.html' %}
+{% extends 'blog_codemy/navbar.html' %}
 {% block title %} {{ reg.id }} {{ reg.title_tag }} {% endblock %}
 {% block content %}
 
@@ -11,6 +11,9 @@
 {{ reg.body }}
 </br>
 </br>
-<a href="{% url 'home' %}" class=" ">Back</a>
+<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<a href="{% url 'updateform' reg.pk %}" class="btn btn-primary"> Edit </a>
+<button class="btn btn-info"> Delete </button>
+
 
 {% endblock %}
