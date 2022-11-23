@@ -11,6 +11,7 @@ class Postform(forms.ModelForm):
         'title_tag': 'Tag',
         'author': 'Writer',
         'body': 'Text',
+        'pub_date': '',
         }
 
 
@@ -20,6 +21,7 @@ class Postform(forms.ModelForm):
             'title_tag': forms.TextInput(attrs={'class' : 'form-control', 'placeholder':'Post Title'}),
             'author': forms.Select(attrs={'class' : 'form-control'}),
             'body': forms.Textarea(attrs={'class' : 'form-control'}),
+            'pub_date': forms.DateTimeField
         }
 
 

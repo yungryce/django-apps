@@ -8,6 +8,8 @@
     - {{ reg.author.first_name}} {{ reg.author.last_name}} </br>
     - {{reg.body}} 
     <br>
+    <small>{{ reg.pub_date }}</small>
+    <br>
     <a href="{% url 'updateform' reg.pk %}">edit</a>
     <a href="{% url 'deletepost' reg.pk %}">delete</a>
     </li>

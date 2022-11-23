@@ -2,18 +2,27 @@
 {% block title %} {{ reg.id }} {{ reg.title_tag }} {% endblock %}
 {% block content %}
 
-<h1> {{ reg.title}} </h1>
+    <h1> 
+        {{ reg.title}} 
+    </h1>
 
-<small>By: {{ reg.author.last_name }} {{ reg.author.first_name }} </small>
-</br>
-<hr>
-</br>
-{{ reg.body }}
-</br>
-</br>
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-<a href="{% url 'updateform' reg.pk %}" class="btn btn-primary"> Edit </a>
-<button class="btn btn-info"> Delete </button>
+    <small>
+        By: {{ reg.author.last_name }} {{ reg.author.first_name }} 
+    </small>
+    </br>
+    <small>
+        {{ reg.pub_date }}
+    </small>
+    <hr>
+    </br>
+    <p>
+        {{ reg.body }}
+    </p>
+    </br>
+    </br>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    <a href="{% url 'updateform' reg.pk %}" class="btn btn-primary"> Edit </a>
+    <button class="btn btn-info"> Delete </button>
 
 
 {% endblock %}
